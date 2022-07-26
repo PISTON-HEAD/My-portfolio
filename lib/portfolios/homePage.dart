@@ -78,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             side: const BorderSide(
                                 width: 2.5, color: Colors.blueAccent)),
                         onPressed: () {
-                            Navigator.pop(
+                            Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => const allProjects()));
