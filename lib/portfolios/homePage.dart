@@ -232,7 +232,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             CircularPercentIndicator(
                               reverse: true,
                               animation: true,
-                              animationDuration: 500,
+                              animationDuration: 800,
                               lineWidth: 12,
                               animateFromLastPercent: true,
                               percent: 0.9,
@@ -275,7 +275,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             CircularPercentIndicator(
                               reverse: true,
                               animation: true,
-                              animationDuration: 500,
+                              animationDuration: 800,
                               lineWidth: 12,
                               animateFromLastPercent: true,
                               percent: 0.75,
@@ -318,7 +318,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             CircularPercentIndicator(
                               reverse: true,
                               animation: true,
-                              animationDuration: 500,
+                              animationDuration: 800,
                               lineWidth: 12,
                               animateFromLastPercent: true,
                               percent: 0.65,

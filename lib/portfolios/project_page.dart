@@ -15,7 +15,10 @@ class _allProjectsState extends State<allProjects> {
   Widget build(BuildContext context) {
     return  Scaffold(
       body:  Container(
-        child: Text("Hello Welcome To My projects"),
+        decoration:const BoxDecoration(
+          gradient: LinearGradient(colors: [Color(0xff213A50), Color(0xff071930)],)
+        ),
+        child: ListView(),
       ),
     );
   }
