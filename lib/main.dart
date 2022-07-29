@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_port/portfolios/homePage.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:my_port/portfolios/project_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

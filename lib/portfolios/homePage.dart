@@ -1,7 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:my_port/portfolios/project_page.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -72,28 +71,28 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                               ),
                             ))),
-                    OutlinedButton(
-                        autofocus: true,
-                        style: OutlinedButton.styleFrom(
-                            side: const BorderSide(
-                                width: 2.5, color: Colors.blueAccent)),
-                        onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const allProjects()));
-                        },
-                        child: SizedBox(
-                            height: 50,
-                            width: 80,
-                            child: Center(
-                              child: Text(
-                                "Projects",
-                                style: GoogleFonts.adamina(
-                                  fontSize: 20,
-                                ),
-                              ),
-                            ))),
+                    // OutlinedButton(
+                    //     autofocus: true,
+                    //     style: OutlinedButton.styleFrom(
+                    //         side: const BorderSide(
+                    //             width: 2.5, color: Colors.blueAccent)),
+                    //     onPressed: () {
+                    //         Navigator.push(
+                    //             context,
+                    //             MaterialPageRoute(
+                    //                 builder: (context) => const allProjects()));
+                    //     },
+                    //     child: SizedBox(
+                    //         height: 50,
+                    //         width: 80,
+                    //         child: Center(
+                    //           child: Text(
+                    //             "Projects",
+                    //             style: GoogleFonts.adamina(
+                    //               fontSize: 20,
+                    //             ),
+                    //           ),
+                    //         ))),
 
                   ],
                 ),
@@ -187,7 +186,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   const SizedBox(
                     width: 22,
                   ),
-                  imageHandler("whatsapp.png", 60),
+                  GestureDetector(
+                      onTap: (){
+                        Uri url = Uri.parse("https://play.google.com/store/apps/details?id=com.gokul.to_do_list&hl=en_IN&gl=US");
+                        _launchUrl(url);
+                      },
+                      child: imageHandler("playstore.png", 60)),
                 ],
               ),
               const SizedBox(
@@ -375,7 +379,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   ClipRRect imageHandler(String imgName, int imgWidth) {
     return ClipRRect(
-        borderRadius: BorderRadius.circular(80),
+        borderRadius: BorderRadius.circular(10),
         child: Image.asset(
           "images/$imgName",
           width: imgWidth.toDouble(),
